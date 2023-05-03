@@ -21,5 +21,5 @@ if (new == NULL)
   new->next = *head;
   *head = new;
 
- return (*head);
+ return (new);
 }
