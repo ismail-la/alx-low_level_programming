@@ -35,7 +35,7 @@ void free_listp(listp_t **head)
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t numnode = 0;
+	size_t numsnode = 0;
 	listp_t *hp, *new, *add;
 
 	hptr = NULL;
@@ -59,15 +59,15 @@ size_t print_listint_safe(const listint_t *head)
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
 				free_listp(&hp);
-				return (numnode);
+				return (numsnode);
 			}
 		}
 
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
-		numnode++;
+		numsnode++;
 	}
 
 	free_listp(&hp);
-	return (numnode);
+	return (numsnode);
 }
