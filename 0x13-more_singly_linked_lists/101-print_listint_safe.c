@@ -37,13 +37,13 @@ size_t print_listint_safe(const listint_t *head)
 	size_t numnode = 0;
 	listp_t *hp, *new, *add;
 
-	hptr = NULL;
+	hp = NULL;
 	while (head != NULL)
 	{
 		new = malloc(sizeof(listp_t));
 
 		if (new == NULL)
-			exit(98);
+		exit(98);
 
 		new->p = (void *)head;
 		new->next = hp;
@@ -53,15 +53,15 @@ size_t print_listint_safe(const listint_t *head)
 
 		while (add->next != NULL)
 		{
-			add = add->next;
-			if (head == add->p)
-			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
-				free_listp(&hp);
-				return (numnode);
-			}
+		add = add->next;
+		if (head == add->p)
+		{
+		printf("-> [%p] %d\n", (void *)head, head->n);
+		free_listp(&hp);
+		return (numnode);
 		}
-
+	        }
+ 
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 		numnode++;
