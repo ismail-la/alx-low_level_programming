@@ -21,14 +21,12 @@
 } listint_t;
 
 
- * struct listp_s - singly linked
-
 /**
  * struct listp_s - singly linked list
- * @p: pointers of nodes
- * @next: pois to the next node
+ * @p: pointers of node.
+ * @next: pois to the next nodes.
  *
- * Description: singly linked list of pointers
+ * Description: a singly linked list of pointers
  */
 
 typedef struct listp_s
