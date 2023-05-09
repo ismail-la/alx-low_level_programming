@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || bytes_r == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
