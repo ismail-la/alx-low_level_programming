@@ -6,10 +6,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
- * File: 100-elf_header.c
- * Auth: Brennan
- */
 
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void check_elf(unsigned char *e_ident);
