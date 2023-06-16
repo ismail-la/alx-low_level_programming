@@ -6,7 +6,7 @@
  * @head: double pointer to the list
  * @n: value of the element or data to insert in the New_Node node
  * Return: the address of the New_Node element
- * 
+ *
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
