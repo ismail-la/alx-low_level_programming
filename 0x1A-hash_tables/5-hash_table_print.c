@@ -5,30 +5,35 @@
  * @ht: Pointer to the hash table to print.
  *
  */
+
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i = 0;
-	char flag = 0;
+	unsigned long int i;
 	hash_node_t *node;
+	unsigned char flag = 0;
 
-	if (ht == NULL || ht->array == NULL)
+	if (ht == NULL)
 		return;
 
 	printf("{");
 
-	while (i < ht->size)
+	for (i = 0; i < ht->size; i++)
 	{
-		node = ht->array[i];
-		while (node != NULL)
+		if (ht->array[i] != NULL)
 		{
 			if (flag == 1)
 				printf(", ");
-			printf("'%s': '%s'", node->key, node->value);
-			flag = 1;
-			node = node->next;
-		}
-	i++
-	}
 
+			node = ht->array[i];
+			while (node != NULL)
+			{
+				printf("'%s': '%s'", node->key, node->value);
+				node = node->next;
+				if (node != NULL)
+					printf(", ");
+			}
+			flag = 1;
+		}
+	}
 	printf("}\n");
 }
